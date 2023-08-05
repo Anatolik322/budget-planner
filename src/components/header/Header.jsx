@@ -1,10 +1,11 @@
 import React from 'react'
-
+import './header.css'
 function Header() {
   return (
-    <div>
-      
-    </div>
+    <header className='header'>
+        <div className="logo"></div>
+        <div className="link"></div>
+    </header>
   )
 }
 
