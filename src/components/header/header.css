@@ -2,4 +2,26 @@
     background-color: #ff9900;
     height: 100px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.logo img{
+    width: 5rem;
+    height: 5rem;
+    padding: 0.5rem;
+}
+
+.header_link{
+    color: #fff;
+    font-size: large;
 }
