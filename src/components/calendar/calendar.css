@@ -1,0 +1,10 @@
+.table{
+    color: #212529;
+    
+}
+
+table, th, td{
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+
