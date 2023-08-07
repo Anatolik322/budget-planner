@@ -19,6 +19,13 @@ code {
   height: 100%;
 }
 
+.main_part{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .App{
   background-image: url("./img/backgr.png");
   width: 100%;
