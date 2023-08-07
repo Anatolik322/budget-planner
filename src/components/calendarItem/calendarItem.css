@@ -7,3 +7,8 @@
     display: inline-block;
 
 }
+
+.item_date_selected{
+    border-radius: 100%;
+    background-color: red;
+}

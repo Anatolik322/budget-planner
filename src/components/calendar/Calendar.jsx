@@ -3,7 +3,7 @@ import "./calendar.css"
 import CalendarItem from '../calendarItem/CalendarItem';
 
 function Calendar() {
-
+  console.log('rer')
   function days() {
     let d = new Date()
     let days = 32 - new Date(d.getFullYear(), d.getMonth(), 32).getDate();
