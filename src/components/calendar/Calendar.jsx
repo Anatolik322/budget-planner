@@ -1,49 +1,27 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import "./calendar.css"
+import CalendarItem from '../calendarItem/CalendarItem';
 
 function Calendar() {
-  let d = new Date()
-  Date.prototype.daysInMonth = function() {
-		let days = 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
-    let daysArr = []
-    for(let i = 1; i <= days; i++){
+
+  function days() {
+    let d = new Date()
+    let days = 32 - new Date(d.getFullYear(), d.getMonth(), 32).getDate();
+    let daysArr = [];
+    for (let i = 1; i <= days; i++) {
       daysArr.push(i)
     }
     return daysArr;
-	};
-  console.log(d.daysInMonth(), d.getDate())
-  const rows = [];
-  for (let i = 0; i < d.daysInMonth().length; i += 7) {
-    const rowCells = d.daysInMonth().slice(i, i + 7);
-    rows.push(
-      <tr key={i}>
-        {rowCells.map((cellData, index) => (
-          <td key={index}>{cellData}</td>
-        ))}
-      </tr>
-    );
   }
+  const daysInMonth = useMemo(() => days(), [days]) 
+
   return (
-    <div>
-      <table class="table table-bordered text-center">
-        
-        <tbody>
-          <tr>
-            {
-              // d.daysInMonth().map((e) => {
-              //   if(e % 7 == 0){
-              //     return <tr>
-                       
-              //     </tr>
-                   
-              //   }
-              //   return <td>{e}</td>
-              // })
-              rows
-            }
-          </tr>
-        </tbody>
-        </table>
+    <div className="table">
+      {
+        daysInMonth.map((e) => {
+          return <CalendarItem day={e} amount={50} spend={3}/>
+        })
+      }
     </div>
   )
 }
