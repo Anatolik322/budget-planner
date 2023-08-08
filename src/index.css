@@ -23,7 +23,10 @@ code {
   margin-top: 3rem;
   display: flex;
   flex-direction: row;
+  gap: 2rem;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .App{

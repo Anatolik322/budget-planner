@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <Header></Header>
       <main className="main_part">
-        <Calendar></Calendar>
         <SpendInput></SpendInput>
+        <Calendar></Calendar>
       </main>
       
     </div>

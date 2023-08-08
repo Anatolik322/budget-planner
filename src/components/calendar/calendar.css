@@ -1,7 +1,9 @@
 .table{
+    padding-left: 2rem;
     color: #fff;
     width: 30rem;
-    margin: 0px;
+    margin: 0, auto;
+    align-self: center;
 }
 
 table, th, td{
