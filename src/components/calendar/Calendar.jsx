@@ -1,10 +1,21 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useEffect } from 'react'
 import "./calendar.css"
 import CalendarItem from '../calendarItem/CalendarItem';
+import { setDays } from '../../service/amountSlice';
+import {useSelector, useDispatch} from 'react-redux'
 
 function Calendar() {
-  console.log('rer')
+  const disp = useDispatch();
+  const daysInMonth = useMemo(() => days(), [days]);
+  
+  useEffect(()=> {
+    disp(setDays(daysInMonth))
+  }, [])
+
+  const store = useSelector(state => state)
+  console.log(daysInMonth);
   function days() {
+
     let d = new Date()
     let days = 32 - new Date(d.getFullYear(), d.getMonth(), 32).getDate();
     let daysArr = [];
@@ -13,13 +24,13 @@ function Calendar() {
     }
     return daysArr;
   }
-  const daysInMonth = useMemo(() => days(), [days]) 
+  
 
   return (
     <div className="table">
       {
-        daysInMonth.map((e) => {
-          return <CalendarItem day={e} amount={50} spend={3}/>
+        store.daysArr[0] !== null && store.daysArr.map((e) => {
+          return <CalendarItem day={e[0]} amount={Math.floor(5000 / store.daysArr.length)} spend={e[1]} key={Math.random()}/>
         })
       }
     </div>
