@@ -8,14 +8,12 @@ function Calendar() {
   const disp = useDispatch();
   const daysInMonth = useMemo(() => days(), [days]);
   
-  useEffect(()=> {
+  if(new Date().getDate() == 1){
     disp(setDays(daysInMonth))
-  }, [])
-
+  }
   const store = useSelector(state => state)
-  console.log(daysInMonth);
+  
   function days() {
-
     let d = new Date()
     let days = 32 - new Date(d.getFullYear(), d.getMonth(), 32).getDate();
     let daysArr = [];
@@ -25,7 +23,6 @@ function Calendar() {
     return daysArr;
   }
   
-
   return (
     <div className="table">
       {
