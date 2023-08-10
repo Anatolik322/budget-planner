@@ -4,6 +4,7 @@
     width: 30rem;
     margin: 0, auto;
     align-self: center;
+    z-index: 0;
 }
 
 table, th, td{

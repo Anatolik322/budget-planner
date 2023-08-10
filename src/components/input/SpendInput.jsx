@@ -1,15 +1,18 @@
 import React, {useState} from 'react'
 import { addSpend } from '../../service/amountSlice'
 import { useDispatch } from "react-redux"
+import CategoryModal from '../categoryModal/CategoryModal';
+import './spendInput.css'
+
 function SpendInput() {
   
   const [sum, setSum] = useState(0);
+  const [modal, setmodal] = useState(false);
   const disp = useDispatch();
   
   const handleClick = () => {
-   
+    setmodal(!modal)
     const d = new Date();
-    //e.preventDefault();
     disp(addSpend({
       index: d.getDate() - 1,
       sum: sum
@@ -17,13 +20,19 @@ function SpendInput() {
   }
 
   return (
-    <div>
+    <>
+      {modal ? 
+      <CategoryModal isOpen={true} sum={sum}></CategoryModal>
+      :
+      <div className='input'>
       <h2>Today spend:</h2>
       <div>
         <input type="number" onChange={e => {setSum(e.target.value)}}/>
         <button onClick = {handleClick} > Confirm </button>
       </div>
-    </div>
+    </div>}
+    </>
+    
   )
 }
 

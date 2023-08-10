@@ -3,6 +3,7 @@ import "./calendar.css"
 import CalendarItem from '../calendarItem/CalendarItem';
 import { setDays } from '../../service/amountSlice';
 import {useSelector, useDispatch} from 'react-redux'
+import ChooseModal from '../categoryModal/CategoryModal';
 
 function Calendar() {
   const disp = useDispatch();
@@ -27,7 +28,7 @@ function Calendar() {
     <div className="table">
       {
         store.daysArr[0] !== null && store.daysArr.map((e) => {
-          return <CalendarItem day={e[0]} amount={Math.floor(5000 / store.daysArr.length)} spend={e[1]} key={Math.random()}/>
+          return <CalendarItem day={e[0]} amount={Math.floor(store.total / store.daysArr.length)} spend={e[1]} key={Math.random()}/>
         })
       }
     </div>
