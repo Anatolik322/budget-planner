@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect } from 'react'
 import "./calendar.css"
 import CalendarItem from '../calendarItem/CalendarItem';
-import { setDays } from '../../service/amountSlice';
+import { setDays, clearState } from '../../service/amountSlice';
 import {useSelector, useDispatch} from 'react-redux'
 import ChooseModal from '../categoryModal/CategoryModal';
 
@@ -31,6 +31,7 @@ function Calendar() {
           return <CalendarItem day={e[0]} amount={Math.floor(store.total / store.daysArr.length)} spend={e[1]} key={Math.random()}/>
         })
       }
+      <button onClick={() => disp(clearState())}>Reset</button>
     </div>
   )
 }
