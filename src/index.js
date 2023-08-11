@@ -9,6 +9,7 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import Stats from './components/stats/Stats';
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         path: "/budget-planner",
         element: <App></App>,
     },
+    {
+        path: "/stats",
+        element: <Stats></Stats>
+    }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
