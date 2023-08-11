@@ -37,7 +37,19 @@ export const amountSlice = createSlice({
             })
         },
         clearState: (state, action) => {
-            state.daysArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31].map(e => {
+
+            state.categories = [
+                ["category", "sum"],
+                ["Food", 0],
+                ["Health", 0],
+                ["Shelter", 0],
+                ["Bills", 0],
+                ["Transport", 0],
+                ["Saving", 0],
+                ["Other", 0],
+            ]
+
+            state.daysArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map(e => {
                 return e = [e, 0]
             });
         },
