@@ -1,14 +1,35 @@
 .calendar_item{
     width: 5rem;
     height: 5rem;
-   
+    background-color: #fff;
     border: 1px solid #dee2e6;
     margin: 0;
     display: inline-block;
-
+    color: #232323;
 }
 
 .item_date_selected{
     border-radius: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
     background-color: red;
+    text-align: center;
+}
+
+.item_date{
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    color: #232323;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.sp{
+    color: red;
+}
+
+.can{
+    color: #4dc274;
 }
