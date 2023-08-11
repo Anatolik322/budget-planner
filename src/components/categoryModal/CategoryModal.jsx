@@ -1,7 +1,7 @@
 import React from 'react'
 import './chooseModal.css'
 
-function CategoryModal({isOpen, sum}) {
+function CategoryModal({isOpen, sum, close}) {
     if (isOpen) {
         return (
             <div className='modal'>
@@ -15,7 +15,7 @@ function CategoryModal({isOpen, sum}) {
                                 <option value="3">Green Tea</option>
                             </select>
                         </div>
-                        <button className='modal_btn'>Submit</button>
+                        <button className='modal_btn' onClick={() => close(false)}>Submit</button>
                     </div>
                 </div>
             </div>

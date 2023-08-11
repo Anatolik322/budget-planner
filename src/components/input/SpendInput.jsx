@@ -23,7 +23,7 @@ function SpendInput() {
   return (
     <>
       {modal ? 
-      <CategoryModal isOpen={true} sum={sum}></CategoryModal>
+      <CategoryModal isOpen={true} sum={sum} close = {setmodal}></CategoryModal>
       :
       <div className='input'>
       <h2>Today spend:</h2>

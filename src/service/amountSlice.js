@@ -11,8 +11,8 @@ export const amountSlice = createSlice({
     name: 'amount',
     initialState,
     reducers: {
-        increment: (state) => {
-            state.value += 1
+        spendIncrement: (state, action) => {
+            state.spend += action.payload
         },
         setDays: (state, action) => {
             state.daysArr = action.payload.map(e => {
@@ -34,7 +34,7 @@ export const amountSlice = createSlice({
     },
 })
 
-export const {increment, setDays, addSpend, clearState} = amountSlice.actions
+export const {spendIncrement, setDays, addSpend, clearState} = amountSlice.actions
 export default amountSlice.reducer
 
 //[action.payload.index][1] = action.payload.sum
