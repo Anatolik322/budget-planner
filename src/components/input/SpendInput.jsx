@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux"
 import CategoryModal from '../categoryModal/CategoryModal';
 import './spendInput.css'
 
-function SpendInput() {
+function SpendInput({title}) {
   
   const [sum, setSum] = useState(0);
   const [modal, setmodal] = useState(false);
@@ -26,10 +26,12 @@ function SpendInput() {
       <CategoryModal isOpen={true} sum={sum} close = {setmodal}></CategoryModal>
       :
       <div className='input'>
-      <h2>Today spend:</h2>
+      <h2>{title}</h2>
       <div>
         <input type="number" onChange={e => {setSum( +e.target.value)}}/>
-        <button onClick = {handleClick} > Confirm </button>
+        <button onClick = {
+          sum !== 0 ? handleClick : undefined
+        } > Confirm </button>
       </div>
     </div>}
     </>
