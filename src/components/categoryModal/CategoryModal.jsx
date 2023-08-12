@@ -4,7 +4,7 @@ import { addSpendByCategory } from '../../service/amountSlice'
 import './chooseModal.css'
 
 function CategoryModal({isOpen, sum, close}) {
-    const [value, setValue] = useState([]);
+    const [value, setValue] = useState(['Food', sum]);
     const disp = useDispatch();
     if (isOpen) {
         return (

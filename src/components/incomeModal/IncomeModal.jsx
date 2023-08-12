@@ -11,10 +11,11 @@ function IncimeModal() {
   const [sum, setSum] = useState(0);
 
   useEffect(()=> {
-
+    setSum(0)
   }, [total])
 
   if(total === 0 || d.getDate() === 1){
+    
     return (
       <div className='incomeModal'>
         <div>
