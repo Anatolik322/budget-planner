@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { addSpend } from '../../service/amountSlice'
+import { addSpend, setTotal } from '../../service/amountSlice'
 import { useDispatch } from "react-redux"
 import CategoryModal from '../categoryModal/CategoryModal';
 import './spendInput.css'
@@ -18,6 +18,7 @@ function SpendInput({title}) {
       index: d.getDate() - 1,
       sum: sum
     }));
+    disp(setTotal(-sum))
   }
 
   return (
