@@ -8,7 +8,7 @@ function CalendarItem({day, amount, spend, today}) {
     <div className="calendar_item">
       <div className={day == d.getDate() ? "item_date_selected": "item_date"}>{day}</div>
       <div className="sum">
-        <span className="can">{amount}</span><br/>
+        {day == d.getDate() && <span className="can">{amount}</span>}<br/>
         <span className="sp">-{spend}</span>
       </div>
     </div>
