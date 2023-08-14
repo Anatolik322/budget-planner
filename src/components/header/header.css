@@ -1,10 +1,12 @@
 .header{
-    background-color: #232323;
+    background-color: lightblue;
     height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: #799ba1;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .logo{
@@ -12,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    color: #fff;
+    
 }
 
 .logo img{
@@ -22,6 +24,17 @@
 }
 
 .header_link{
-    color: #fff;
     font-size: large;
+}
+
+a{
+    text-decoration: none;
+    color: #799ba1;
+    font-weight: 700;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s;
 }
