@@ -8,11 +8,11 @@ import ChooseModal from '../categoryModal/CategoryModal';
 function Calendar() {
   const disp = useDispatch();
   const daysInMonth = useMemo(() => days(), [days]);
-  
-  if(new Date().getDate() == 1){
+  const store = useSelector(state => state)
+  if(new Date().getDate() == 1 || store.daysArr.length == 0){
     disp(setDays(daysInMonth))
   }
-  const store = useSelector(state => state)
+  
   
   function days() {
     let d = new Date()
