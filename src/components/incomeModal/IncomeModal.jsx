@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './incomeModal.css'
 import { useDispatch, useSelector } from 'react-redux'
-import SpendInput from '../input/SpendInput';
 import { setTotal } from '../../service/amountSlice';
 
 function IncimeModal() {
@@ -19,6 +18,7 @@ function IncimeModal() {
     return (
       <div className='incomeModal'>
         <div>
+          <h2>Income:</h2>
         <input type="number" onChange={e => {setSum( +e.target.value)}}/>
         <button onClick = {() => {
           disp(setTotal(sum))

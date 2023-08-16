@@ -23,7 +23,7 @@ function CategoryModal({isOpen, sum, close}) {
                                 <option value='Other'>Other</option>
                             </select>
                         </div>
-                        <button className='modal_btn' onClick={() => {
+                        <button className='modal_btn category_btn' onClick={() => {
                             close(false)
                             disp(addSpendByCategory(value))
                             }}>Submit</button>
