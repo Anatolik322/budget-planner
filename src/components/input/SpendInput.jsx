@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { addSpend, setTotal } from '../../service/amountSlice'
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import CategoryModal from '../categoryModal/CategoryModal';
 import './spendInput.css'
 
@@ -8,6 +8,7 @@ function SpendInput({title}) {
   
   const [sum, setSum] = useState(0);
   const [modal, setmodal] = useState(false);
+  const state = useSelector(state => state)
   const disp = useDispatch();
   
   const handleClick = () => {
@@ -34,6 +35,8 @@ function SpendInput({title}) {
           sum !== 0 ? handleClick : undefined
         } > Confirm </button>
       </div>
+      <h2>Balance:{state.total}</h2>
+    
     </div>}
     </>
     

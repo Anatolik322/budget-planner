@@ -28,7 +28,7 @@ function Calendar() {
     <div className="table">
       {
         store.daysArr[0] !== null && store.daysArr.map((e) => {
-          return <CalendarItem day={e[0]} amount={Math.floor(store.total / store.daysArr.length)} spend={e[1]} key={Math.random()}/>
+          return <CalendarItem day={e[0]} amount={ e[0] >= new Date().getDate() && Math.floor(store.total / (store.daysArr.length - new Date().getDate()))} spend={e[1]} key={Math.random()}/>
         })
       }
       <button onClick={() => disp(clearState())}>Reset</button>
