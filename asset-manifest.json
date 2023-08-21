@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/budget-planner/static/css/main.57f47392.css",
+    "main.js": "/budget-planner/static/js/main.155c7ec4.js",
+    "static/media/pngwing.com.png": "/budget-planner/static/media/pngwing.com.92f9834c172785944585.png",
+    "index.html": "/budget-planner/index.html",
+    "main.57f47392.css.map": "/budget-planner/static/css/main.57f47392.css.map",
+    "main.155c7ec4.js.map": "/budget-planner/static/js/main.155c7ec4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57f47392.css",
+    "static/js/main.155c7ec4.js"
+  ]
+}
