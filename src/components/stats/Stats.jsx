@@ -19,7 +19,7 @@ function Stats() {
         chartType="PieChart"
         data={data}
         options={options}
-        width={"60%"}
+        width={"100%"}
         height={"400px"}
         />
         <Footer></Footer>
