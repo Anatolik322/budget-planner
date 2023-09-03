@@ -9,7 +9,7 @@ function IncimeModal() {
   const d = new Date();
   const [sum, setSum] = useState(0);
 
-  useEffect(()=> {
+  useEffect(() => {
     setSum(0)
   }, [total])
 

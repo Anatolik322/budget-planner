@@ -2,18 +2,18 @@ import React, { useMemo, useEffect } from 'react'
 import "./calendar.css"
 import CalendarItem from '../calendarItem/CalendarItem';
 import { setDays, clearState } from '../../service/amountSlice';
-import {useSelector, useDispatch} from 'react-redux'
-import ChooseModal from '../categoryModal/CategoryModal';
+import {useSelector, useDispatch} from 'react-redux';
+
 
 function Calendar() {
   const disp = useDispatch();
   const daysInMonth = useMemo(() => days(), [days]);
   const store = useSelector(state => state)
-  if(new Date().getDate() == 1 || store.daysArr.length == 0){
+  if (new Date().getDate() == 1 || store.daysArr.length == 0) {
     disp(setDays(daysInMonth))
   }
-  
-  
+
+
   function days() {
     let d = new Date()
     let days = 32 - new Date(d.getFullYear(), d.getMonth(), 32).getDate();
